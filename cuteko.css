@@ -1,0 +1,328 @@
+
+.navbar{
+    position: fixed;
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    justify-content: center;
+    
+     
+    top: 0;
+    left: 0;
+    right: 0;
+   
+    z-index: 10;
+   
+}
+
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: sticky;
+   
+
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(250, 114, 23);
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+   
+}
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #a73305;
+    position: absolute;
+    left: 0%;
+    bottom: -10px;
+    transition: 0.5s;
+
+
+}
+.navbar ul li:hover::after {
+    width: 100%;
+
+
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 15px;
+        justify-content: space-between;
+        background-color: #421e09;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        position: fixed;
+        top: 35px;
+        left: -100%;
+        height: 100vh;
+        width: 180px;
+        background: #492109;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease;
+        z-index: 15;
+    }
+
+    .navbar ul li {
+        display: flex;
+        margin-top: 50px;
+        
+    }
+
+    .navbar ul li a {
+        color: rgb(250, 114, 23);
+        font-size: 20px;
+    }
+
+    .navbar ul.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(241, 216, 216);
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+}
+
+
+.content-wrapper {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column; 
+    padding: 0 5%;
+}
+
+.text-content {
+    max-width: 80%; 
+}
+
+#main-header {
+    font-size: 4em;
+    font-weight: 900;
+    color: transparent; 
+    background-image: url(https://i.pinimg.com/736x/e3/15/ff/e315ff36ccb552cae8833e631a51eb3b.jpg); 
+    background-size: cover; 
+    background-clip: text;
+    -webkit-background-clip: text; 
+    text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent; 
+    margin-bottom: 20px;
+    margin-left: -2cm;
+    word-wrap: break-word;
+    width: 100vh;
+ 
+}
+@media (max-width: 768px) {
+    #main-header {
+        font-size: 8vw; /* Larger font on mobile */
+        margin-left: 100px;
+        word-wrap: break-word; /* Ensure text wraps if it's too long */
+        word-break: break-word; /* Handle breaking words if necessary */
+        width: 160%; /* Make sure the width is 100% of the screen */
+        text-align: center; /* Center the header text */
+        line-height: 1.2;
+        justify-content: center;
+        margin-top: -140px;
+        margin-left: -50px;
+
+    }
+}
+
+#main-paragraph {
+    font-size: 20px;
+    color: #8C62390;
+    line-height: 1.4;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%; 
+    font-weight: bold;
+    word-wrap: break-word;
+    width: 103vh;
+    margin-left: -2cm;
+}
+
+@media (max-width: 768px) {
+    #main-paragraph {
+        font-size: 3.5vw; /* Smaller font size for mobile */
+        width: 30vh;
+    }
+}
+
+
+
+.about {
+    padding: 80px 0;
+    background: #f9f9f9;
+    margin-top: 700px; 
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.about-text h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 3px;
+    background: #c17f59;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #c17f59;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #a66b47;
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+.comic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 127, 53);
+    background-color: rgb(255, 242, 129);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(255, 204, 146);
+    transition: all 0.3s ease-in;
+
+    margin: 14px;
+    position: relative;
+    z-index: 1;
+    
+
+  }
+  .comic-button:hover{
+    background-color: #ffffff;
+    color: rgb(233, 7, 7);
+    border: 2px solid rgb(185, 127, 50);
+    box-shadow: 5px 5px 0px #f7d386;
+  }
+  .comic-button:active{
+    background-color: #b84685;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+  @media (max-width: 768px) {
+    .comic-button {
+        font-size: 18px; /* Smaller font size for mobile */
+        padding: 8px 15px; /* Adjust padding */
+        margin: 10px; /* Smaller margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .comic-button {
+        font-size: 16px; /* Further reduce font size on very small screens */
+        padding: 6px 12px; /* Adjust padding for small screens */
+        margin: 8px; /* Adjust margin for small screens */
+    }
+}
+
+
+.texty {
+    text-align: center;  /* Centers the text */
+    font-family: "Open Sans", sans-serif;  /* Sets the font */
+    font-weight: 400;  /* Sets font weight */
+    font-size: 1.2rem;  /* Adjusts font size */
+    color: #333;  /* Text color */
+    margin: 20px auto;  /* Centers the text block with margin */
+    padding: 20px;  /* Adds padding around the text */
+    width: 80%;
+}
